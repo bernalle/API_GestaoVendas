@@ -6,10 +6,10 @@ import ShowProductService from '../services/ShowProductService';
 import UpdateProductService from '../services/UpdateProductService';
 
 export default class ProductsControlle {
-  public async index(request: Request, responde: Response): Promise<Response> {
-    const listProducets = new ListProductService();
+  public async index(request: Request, response: Response): Promise<Response> {
+    const listProducts = new ListProductService();
 
-    const products = await listProducets.execute();
+    const products = await listProducts.execute();
     return response.json(products);
   }
 
